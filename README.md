@@ -1,4 +1,4 @@
-# Task-3---SQL_to_ORM
+# Task 4 - ORM with FastAPI
 
 ##  Overview
 This project demonstrates how to build a simple **ORM-based CRUD API** using **FastAPI**, **SQLAlchemy**, and **PostgreSQL** with **Alembic** for database migrations.
