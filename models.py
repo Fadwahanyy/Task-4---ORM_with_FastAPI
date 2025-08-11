@@ -22,5 +22,5 @@ Enrollment  = AutomapBase.classes.enrollments
 Assignment  = AutomapBase.classes.assignments
 Submission  = AutomapBase.classes.submissions
 
-#
+
 Base = AutomapBase

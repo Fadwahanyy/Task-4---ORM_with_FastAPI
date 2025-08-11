@@ -1,16 +1,17 @@
-
 import os
 from pathlib import Path
 from dotenv import load_dotenv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.engine import URL
+from urllib.parse import quote_plus
+
 
 env_path = Path(__file__).with_name(".env")  
 load_dotenv(dotenv_path=env_path, override=True)
 
 DB_USER = os.getenv("DB_USER")
-DB_PASSWORD = os.getenv("DB_PASSWORD")
+DB_PASSWORD = quote_plus(os.getenv("DB_PASSWORD") or "")
 DB_HOST = os.getenv("DB_HOST", "localhost")
 DB_PORT = int(os.getenv("DB_PORT", "5432"))
 DB_NAME = os.getenv("DB_NAME")
@@ -37,3 +38,5 @@ if __name__ == "__main__":
             print("Connected!")
     except Exception as e:
         print("Connection failed:", e)
+
+

@@ -1,4 +1,3 @@
-
 from datetime import date
 from sqlalchemy import select, and_
 from db import SessionLocal
